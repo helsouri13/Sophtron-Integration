@@ -30,3 +30,17 @@ from the `python` directory.
 
 Alternatively, export both variables in the shell before running the script.
 For example, use `read -rsp` for the secret to avoid displaying it as you type.
+
+## Connecting a bank
+
+Run `python try.py` from this directory. The example searches for Bank of
+America, asks for the bank login in the terminal, and handles common MFA
+challenges returned by the API. The password, PIN, security answers, and
+verification codes are not stored in the script. The example asks before
+submitting bank credentials to Sophtron and prints transaction details to the
+terminal only if you choose to fetch them.
+
+This terminal example cannot display CAPTCHA challenges. If the connection
+requires one, use Sophtron's supported widget or contact Sophtron for the
+recommended flow. Never commit API or bank credentials, and do not run this
+example on a shared or untrusted machine.
